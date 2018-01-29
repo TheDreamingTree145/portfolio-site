@@ -38,3 +38,10 @@ end
     thumb_image: "https://placehold.it/350x150"
   )
 end
+
+3.times do |technology|
+  Technology.create!(
+    name: "Technology #{technology}",
+    portfolio_id: Portfolio.last.id
+  )
+end
