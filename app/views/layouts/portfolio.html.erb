@@ -4,7 +4,7 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -17,8 +17,6 @@
     <%= login_helper %>
 
     <%= yield %>
-    <% if session[:source] %>
-      Thanks for visiting me from <%= session[:source] %>
-    <% end %>
+    <%= source_helper("portfolio") %>
   </body>
 </html>
