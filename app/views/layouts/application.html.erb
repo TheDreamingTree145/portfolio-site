@@ -15,11 +15,9 @@
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
       <%= render "shared/application_nav" %>
 
-      <%= login_helper %>
-
       <%= yield %>
+      <%= render "shared/application_footer" %>
       <%= source_helper("application") %>
-      <%= copyright_generator %>
     </div>
   </body>
 </html>
