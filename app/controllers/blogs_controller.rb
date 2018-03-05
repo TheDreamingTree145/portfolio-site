@@ -1,11 +1,11 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
-  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update]}, site_admin: :all
+  access all: [:show, :index], user: {except: [:destroy, :new, :create, :edit, :update, :toggle_status]}, site_admin: :all
   layout "blog"
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.all
+    @blogs = Blog.page(params[:page]).per(5)
     @page_title = "Dustin Anderson | Blog"
   end
 
@@ -78,4 +78,5 @@ class BlogsController < ApplicationController
     def blog_params
       params.require(:blog).permit(:title, :body)
     end
+
 end
