@@ -9,6 +9,6 @@
     </p>
     <% end %>
   <p>
-    <%= blog.body %>
+    <%= truncate(blog.body, :length => 1000) %>
   </p>
 </div>

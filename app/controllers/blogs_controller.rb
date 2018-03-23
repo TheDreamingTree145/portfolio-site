@@ -5,7 +5,11 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5).order(created_at: :desc)
+    if logged_in?(:site_admin)
+      @blogs = Blog.page(params[:page]).per(5).order(created_at: :desc)
+    else
+      @blogs = Blog.published.page(params[:page]).per(5).order(created_at: :desc)
+    end
     @page_title = "Dustin Anderson | Blog"
   end
 
@@ -78,7 +82,7 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id)
     end
 
 end

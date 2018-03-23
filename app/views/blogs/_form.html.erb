@@ -16,6 +16,17 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :topic %>
+    <%= f.collection_select :topic_id, Topic.all, :id, :title,
+                              {
+                                selected: selected_helper(blog),
+                                include_blank: true
+                              },
+                              class: 'form-control'
+                              %>
+  </div>
+
+  <div class="form-group">
     <%= f.submit "Submit", class: 'btn btn-primary' %>
   </div>
 <% end %>
