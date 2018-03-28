@@ -5,6 +5,9 @@ Rails.application.routes.draw do
     put :sort, on: :collection
   end
 
+  resources :topics, only: [:index, :show]
+
+
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'
