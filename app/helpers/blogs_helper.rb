@@ -8,6 +8,10 @@ module BlogsHelper
     !blog.topic.nil? ? blog.topic.id : 0
   end
 
+  def blog_status_color(blog)
+    'color: red;' if blog.draft?
+  end
+
   class CodeRayify < Redcarpet::Render::HTML
     def block_code(code, language)
       CodeRay.scan(code, language).div
