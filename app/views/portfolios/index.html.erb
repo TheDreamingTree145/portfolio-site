@@ -1,4 +1,7 @@
-<%= link_to "New Portfolio Item", new_portfolio_path if logged_in?(:site_admin) %>
+<div class="row col-md-8">
+  <%= source_helper("alert alert-info") %>
+  <%= link_to "New Portfolio Item", new_portfolio_path if logged_in?(:site_admin) %>
+</div>
 <div class="row <%= "sortable" if logged_in?(:site_admin) %>">
   <%= render partial: 'portfolio_item', collection: @portfolio_items %>
 </div>
