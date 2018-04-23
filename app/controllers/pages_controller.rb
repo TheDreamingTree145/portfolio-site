@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @messages = ["Welcome to my Slice of Paradise", "Enjoy your Stay!"]
   end
 
   def about
