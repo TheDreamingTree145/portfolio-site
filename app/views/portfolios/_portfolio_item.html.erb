@@ -2,8 +2,9 @@
   <div class="card mb-4 box-shadow" data-id="<%= portfolio_item.id %>">
     <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), class: 'card-img-top', width: '100%' %>
     <div class="card-body">
-      <p class="card-text">
-        <span><%= link_to portfolio_item.title, portfolio_item %></span> <%= portfolio_item.subtitle %>
+      <p class="card-text item-text">
+        <span><%= link_to portfolio_item.title, portfolio_item %></span><br>
+        <span> <%= portfolio_item.subtitle %></span>
       </p>
     </div>
   </div>
