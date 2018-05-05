@@ -2,9 +2,103 @@
 
 <div class="row">
   <div class="col-md-4">
-    <%= image_tag "profile.jpg", width: 225, alt: "profile image" %>
+    <%= image_tag "profile.jpg", width: 225, alt: "profile image", class: 'profile-picture' %>
+    <div class="rounded-card">
+      Skills:
+      <ul>
+        <li><h3>Ruby</h3></li>
+        <li><h3>Ruby on Rails</h3></li>
+        <li><h3>JavaScript</h3></li>
+      </ul>
+        Some experience/in-progress skills:
+        <ul>
+          <li>React/Redux</li>
+          <li>Algorithms</li>
+          <li>Node.js</li>
+        </ul>
+    </div>
   </div>
   <div class="col-md-8">
-    <p >Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+    <p class="p-text about-text">Hey there! I'm glad you found me! As a lifelong learner in many disciplines,
+      I found my passion in software development. I discovered coding when I became
+      interested in search engine optimization. Since then, I've been working on my
+      skills in Ruby, Ruby on Rails, JavaScript, and React. <br><br>
+
+      Other than coding, I like to spend a lot of time outdoors hiking, paddleboarding,
+      and anything else that keeps me active. I thoroughly enjoy meeting new people
+      and make an effort to do so in my life. <br><br>
+
+      I believe everyone has something to offer to another person and I look forward
+      to hearing from you and establishing a mutually beneficial relationship.
+    </p>
+    <button
+      class="btn btn-info"
+      type="button"
+      data-toggle="collapse"
+      data-target="#jobs"
+      aria-expanded="false"
+      aria-controls="jobs"
+    >
+    Job History
+    </button>
+
+    <button
+      class="btn btn-info"
+      type="button"
+      data-toggle="collapse"
+      data-target="#education"
+      aria-expanded="false"
+      aria-controls="education"
+    >
+    Education
+    </button>
+
+    <p>
+      <div class="collapse" id="jobs">
+        <h1>Job History</h1>
+        <div class="card card-block about-text">
+          Technical Coach - Flatiron School
+          <ul>
+            <li>Help students progress through the Flatiron curriculum as efficiently as possible</li>
+            <li>Responsible for students through 20 minute screenshares, or through chat, for assignments and
+             appointments for debugging portfolio projects </li>
+             <li>Ran a slack channel with a colleague in an experiment to get students more involved in
+             the Flatiron community</li>
+          </ul>
+        </div>
+        <div class="card card-block about-text">
+          Territory Sales Representative - Michigan Office Solutions <br>
+          <ul>
+            <li>Sold office equipment, managed services and software in assigned territory</li>
+            <li>Managed the entire sales process, which included sourcing potential clients, sales, and retaining clients
+              by providing excellent customer service</li>
+            <li>Participated in team meetings, outings, and team sales days to help achieve sales goals</li>
+          </ul>
+        </div>
+        <div class="card card-block jabout-text">
+          Sales Consultant - Comcast Corporation
+          <ul>
+            <li>Sold services to new customers and upgraded current customers. Sales goals were exceeded helping
+            store become a top-ranked store in the country</li>
+            <li>Participated in private events showcasing Xfinity products and services</li>
+          </ul>
+        </div>
+      </div>
+    </p>
+    <p>
+      <div class="collapse" id="education">
+        <h1>Educational History</h1>
+        <div class="card card-block">
+          Flatiron School - Online Web Developer Program
+        </div>
+        <div class="card card-block">
+          Grand Valley State University - Bachelors of Business Administraion
+          Major - Finance
+        </div>
+        <div class="card card-block">
+          Grand Rapids Community College - Associates Degree
+        </div>
+      </div>
+    </p>
   </div>
 </div>

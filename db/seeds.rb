@@ -1,3 +1,18 @@
+User.create!(
+  email: 'test@test.com',
+  password: 'hello123',
+  password_confirmation: 'hello123',
+  name: 'Admin User',
+  roles: 'site_admin'
+)
+
+User.create!(
+  email: 'test2@test.com',
+  password: 'hello1234',
+  password_confirmation: 'hello1234',
+  name: 'Regular User'
+)
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
@@ -12,29 +27,12 @@ end
   )
 end
 
-5.times do |skill|
-  Skill.create!(
-    title: "Rails #{skill}",
-    percent_utilized: 15
-  )
-end
-
 8.times do |portfolio_item|
   Portfolio.create!(
     title: "Portfolio title: #{portfolio_item}",
     subtitle: "Ruby on Rails",
     body: "My fake portfolio body",
-    main_image: "https://placehold.it/600x400",
-    thumb_image: "https://placehold.it/350x150"
-  )
-end
-
-1.times do |portfolio_item|
-  Portfolio.create!(
-    title: "Portfolio title: #{portfolio_item}",
-    subtitle: "Angular",
-    body: "My fake portfolio body",
-    main_image: "https://placehold.it/600x400",
+    embed_url: "https://placehold.it/600x400",
     thumb_image: "https://placehold.it/350x150"
   )
 end
