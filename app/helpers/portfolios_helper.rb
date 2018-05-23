@@ -4,6 +4,10 @@ module PortfoliosHelper
   end
 
   def portfolio_img(img, type)
-    image_generator(height: '350', width: '200')
+    if img.model.thumb_image?
+      img
+    else
+      image_generator(height: '350', width: '200')
+    end
   end
 end
