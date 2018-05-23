@@ -3,6 +3,6 @@
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
   <%= render 'blogs/admin_actions.html.erb', blog: blog %>
   <p>
-    <%= truncate(markdown(blog.body), :length => 1000) %>
+    <%= markdown blog.body.truncate(500) %>
   </p>
 </div>
